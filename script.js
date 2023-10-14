@@ -9,7 +9,7 @@ for (var i = 1; i <=180; i++) {
 document.querySelector("#pannelBottom").innerHTML=run;
 }
 
-var timer = 60;
+var timer = 3;
 function runTimer(){
     var time=setInterval(function(){
         if(timer>0){
@@ -18,6 +18,7 @@ function runTimer(){
             
         }else{
             clearInterval(time);
+            document.querySelector("#pannelBottom").innerHTML=`<h1>Game Over</h1>`;
         }
     },1000);
 }
